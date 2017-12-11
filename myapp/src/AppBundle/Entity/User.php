@@ -67,6 +67,21 @@ class User implements UserInterface, \Serializable
         return $this->username;
     }
 
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
+    }
+
     public function getSalt()
     {
         // you *may* need a real salt depending on your encoder
@@ -79,6 +94,11 @@ class User implements UserInterface, \Serializable
         return $this->password;
     }
 
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
     public function getRoles()
     {
         return array('ROLE_USER');
@@ -87,6 +107,17 @@ class User implements UserInterface, \Serializable
     public function eraseCredentials()
     {
     }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
 
     /** @see \Serializable::serialize() */
     public function serialize()

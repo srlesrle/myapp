@@ -16,6 +16,7 @@ security:
 
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, roles: ROLE_ADMIN }
 
     firewalls:
@@ -37,5 +38,5 @@ security:
                 check_path: login
 
             pattern:    ^/
-            http_basic: ~
-            provider: our_db_provider
+            http_basic:
+                provider: our_db_provider
