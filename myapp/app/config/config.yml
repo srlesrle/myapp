@@ -65,3 +65,12 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+#access_control:
+        # require ROLE_ADMIN for /admin*
+#        - { path: ^/, roles: ROLE_ADMIN }
+#access_control:
+#        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/admin/, role: ROLE_ADMIN }
+#        - { path: ^/, role: ROLE_ADMIN }

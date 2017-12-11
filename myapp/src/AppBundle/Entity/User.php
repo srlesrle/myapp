@@ -54,6 +54,17 @@ class User implements UserInterface, \Serializable
     * @ORM\Column(name="is_active", type="boolean")
     */
     private $isActive;
+    /**
+     * @ORM\Column(name="roles", type="array")
+     */
+    private $roles = [];
+
+    public function setRoles(array $roles)
+    {
+        $this->roles = $roles;
+        return $this;
+    }
+
 
     public function __construct()
     {
